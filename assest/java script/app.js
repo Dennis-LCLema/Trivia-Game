@@ -126,11 +126,12 @@ function answerPage(){
 
 	var rightAnswerText = triviaQuestions[currentQuestion].answerList[triviaQuestions[currentQuestion].answer];
 	var rightAnswerIndex = triviaQuestions[currentQuestion].answer;
-	$('#gif').html('<img src = "assest/images/'+ gifArray[currentQuestion] +'karl_nofearfaces.jpg" width = "400px">');
+	//var rightAnswerImg = "https://media.giphy.com/media/l0HlUFlEyclRNnv2g/giphy.gif";
 	//checks to see correct, incorrect, or unanswered
 	if((userSelect == rightAnswerIndex) && (answered == true)){
 		correctAnswer++;
 		$('#message').html(messages.correct);
+		$('#image').append('<img src="https://media.giphy.com/media/l0HlUFlEyclRNnv2g/giphy.gif"/>');
 	} else if((userSelect != rightAnswerIndex) && (answered == true)){
 		incorrectAnswer++;
 		$('#message').html(messages.incorrect);
